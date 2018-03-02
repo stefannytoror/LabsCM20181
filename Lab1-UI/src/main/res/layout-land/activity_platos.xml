@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="co.edu.udea.compumovil.gr02_20181.lab1.PlatosActivity"
+    android:orientation="vertical"
+    android:layout_margin="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="4dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <ImageView
+            android:id="@+id/imgPlato"
+            android:layout_width="250dp"
+            android:layout_height="96dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_gallery" />
+
+        <Button
+            android:id="@+id/btnAgregarImagen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="147dp"
+            tools:layout_editor_absoluteY="60dp"
+            android:layout_gravity="center"
+            android:drawableStart="@drawable/ic_camera"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/txtNombrePlato"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/hintNombrePlato"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/lblTipoPlato"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/labelTipoPlato"
+            android:textColor="@color/colorBlack" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioBtnEntrada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/radioBtnEntrada" />
+
+            <RadioButton
+                android:id="@+id/radioBtnPlatoFuerte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/radioBtnPlatoFuerte" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/checkBoxManana"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/checkBoxManana" />
+
+        <CheckBox
+            android:id="@+id/checkBoxTarde"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/checkBoxTarde" />
+
+        <CheckBox
+            android:id="@+id/checkBoxNoche"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/checkBoxNoche" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/labelPrecio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/labelPrecio"
+            android:textColor="@color/colorBlack" />
+
+        <EditText
+            android:id="@+id/txtPrecioPlato"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="3"
+            android:hint="@string/hintPrecio"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/btnTiempoPlato"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:drawableStart="@drawable/ic_access_time_48px"
+            android:onClick="onClick"
+            />
+
+        <TextView
+            android:id="@+id/txtTiempoPlato"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0" />
+
+        <EditText
+            android:id="@+id/txtIngredientes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="13"
+            android:hint="@string/hintIngredientes"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/btnAgregarPlato"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="@string/btnAgregarPlato" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+         >
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutInfoPlato"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/imgPlatoGuardado"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:srcCompat="@drawable/ic_gallery" />
+
+        <TextView
+            android:id="@+id/txtNombreGuardado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/imgPlatoGuardado"
+            android:text="hola mundo" />
+
+        <TextView
+            android:id="@+id/txtHorarioGuardado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="13dp"
+            android:layout_toStartOf="@+id/txtTiempoPlatoGuardado"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/txtTipoPlatoGuardado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="20dp"
+            android:text="TextView" />
+
+
+        <TextView
+            android:id="@+id/txtPrecioMostrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtNombreGuardado"
+            android:layout_toEndOf="@+id/imgPlatoGuardado"
+            android:text="@string/labelPrecio" />
+
+        <TextView
+            android:id="@+id/txtPrecioPlatoGuardado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/txtNombreGuardado"
+            android:layout_toEndOf="@+id/txtPrecioMostrar"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/txtTiempoPlatoMosrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_above="@+id/txtIngredientesGuardado"
+            android:layout_centerHorizontal="true"
+            android:text="@string/txtTiempoPlato" />
+
+        <TextView
+            android:id="@+id/txtTiempoPlatoGuardado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/txtPrecioPlatoGuardado"
+
+            android:layout_alignBottom="@+id/txtPrecioPlatoGuardado"
+            android:layout_toEndOf="@+id/txtTiempoPlatoMosrar"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/txtIngredientesMostrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/txtNombreGuardado"
+            android:layout_below="@+id/txtPrecioMostrar"
+            android:text="@string/txtIngredientes" />
+
+        <TextView
+            android:id="@+id/txtIngredientesGuardado"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/txtTiempoPlatoGuardado"
+            android:layout_toEndOf="@+id/txtPrecioPlatoGuardado"
+            android:text="@string/txtIngredientes" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

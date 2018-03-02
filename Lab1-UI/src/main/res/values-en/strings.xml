@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LabsCM20181</string>
+    <string name="hintNombrePlato">Enter name of Plate</string>
+    <string name="checkBoxManana">Morning</string>
+    <string name="checkBoxTarde">Afternnon</string>
+    <string name="checkBoxNoche">Night</string>
+    <string name="labelTipoPlato">Type of plate</string>
+    <string name="radioBtnEntrada">Entry</string>
+    <string name="radioBtnPlatoFuerte">Main course</string>
+    <string name="labelPrecio">Price</string>
+    <string name="hintPrecio">0</string>
+    <string name="hintIngredientes">Enter ingredients</string>
+    <string name="btnAgregarPlato">Add</string>
+    <string name="txtTiempoPlato">Cooking time</string>
+    <string name="txtIngredientes">Ingredients</string>
+    <string name="hintNombreBebida">Enter name of drink</string>
+    <string name="labelPrecioBebida">Price</string>
+    <string name="btnAgregarBebida">Add</string>
+    <string name="btnRegristrarPlato">Add Plate</string>
+    <string name="btnRegistrarBebida">Add drink</string>
+    <string name="itemMenuBorrar">Delete</string>
+    <string name="itemMenuSalir">Exit</string>
+</resources>
